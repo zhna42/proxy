@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "start": "node server/server",
-    "client": "node client/ddns-client.js"
+    "start": "node server/server"
   },
   "devDependencies": {
     "express": "^4.16.4",

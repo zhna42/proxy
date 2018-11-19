@@ -34,7 +34,7 @@ app.get('/info', function (req, res) {
 })
 
 app.use('/', function (req, res, next){ //'http://176.125.195.113:3001' +".zhna.ru"
-  let n = db.find(element => {return element.domen == req.headers.host;})
+  let n = db.find(element => {return element.domen+".zhna.ru" == req.headers.host;})
   console.log(n, req.headers.host)
   if(n != undefined){
     proxy.web(req, res, { target: "http://"+n.ip }, function(error) {
@@ -45,7 +45,7 @@ app.use('/', function (req, res, next){ //'http://176.125.195.113:3001' +".zhna.
   }
 });
 
-var server = app.listen(3000, "10.100.16.175", function () {
+var server = app.listen(3000, function () { //"10.100.16.175",
   console.log('Example app listening at http://%s:%s', server.address().address, server.address().port);
 });
 
