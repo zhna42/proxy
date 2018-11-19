@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "node server/server",
+    "client": "node client/ddns-client.js"
+  },
+  "devDependencies": {
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.0.2",
+    "http-proxy": "^1.17.0"
+  }
+}
